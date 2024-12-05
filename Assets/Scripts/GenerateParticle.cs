@@ -16,23 +16,29 @@ public class GenerateParticle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetMouseButtonDown(0)) 
-        //{
-        //    Vector3 screenCoords = Input.mousePosition;
-        //    screenCoords.z = 10;
-        //    Vector3 gameCoords = _camera.ScreenToWorldPoint(screenCoords);
-        //    Instantiate(particlePrefab, gameCoords, Quaternion.identity);
-        //}
+        //Instruccion de procesador que se ejecuta antes de compilar el juego
+#if UNITY_EDITOR || UNITY_STANDALONE
+        if (Input.GetMouseButtonDown(0))
+        {
+            InstanceParticles(Input.mousePosition, Color.blue);
+        }
 
+#elif UNITY_ANDROID
         foreach(Touch touch in Input.touches) 
         { 
             if(touch.phase == TouchPhase.Began) 
             {
-                Vector3 screenCoord = touch.position;
-                screenCoord.z = 10;
-                Vector3 gameCoords = _camera.ScreenToWorldPoint(screenCoord);
-                Instantiate(particlePrefab, gameCoords, Quaternion.identity);
+                InstanceParticles(touch.position, Color.magenta);
             }
         }
+#endif
     }
+        void InstanceParticles(Vector3 screenCoords, Color color)
+        {
+            screenCoords.z = 10;
+            Vector3 gameCoords = _camera.ScreenToWorldPoint(screenCoords);
+            GameObject particle = Instantiate(particlePrefab, gameCoords, Quaternion.identity);
+        particle.GetComponent<Renderer>().material.color = color;
+        }
 }
+
