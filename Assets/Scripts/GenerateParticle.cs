@@ -38,7 +38,7 @@ public class GenerateParticle : MonoBehaviour
             screenCoords.z = 10;
             Vector3 gameCoords = _camera.ScreenToWorldPoint(screenCoords);
             GameObject particle = Instantiate(particlePrefab, gameCoords, Quaternion.identity);
-        particle.GetComponent<Renderer>().material.color = color;
+            particle.GetComponent<Renderer>().material.color = color;
         }
 }
 
