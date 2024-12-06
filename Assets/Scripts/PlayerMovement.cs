@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public int jumpForce;
+    public AudioClip jumpClip;
+
     private Camera _cam;
     private Rigidbody _rb;
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         void Movementjump()
         {
             _rb.AddForce(Vector3.up * jumpForce);
+            AudioManager.instance.PlayAudio(jumpClip, "JumpClip");
         }
     }
 }
