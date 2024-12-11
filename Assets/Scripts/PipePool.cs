@@ -21,7 +21,7 @@ public class PipePool : MonoBehaviour
             { 
                 obj.SetActive(true);
                 obj.transform.position = transform.position;
-                obj.GetComponent<Pipe>().SetDirection(transform.right);
+                obj.GetComponent<Pipe>().SetDirection(new Vector3(-1, 0, 0));
             }
         }
     }
