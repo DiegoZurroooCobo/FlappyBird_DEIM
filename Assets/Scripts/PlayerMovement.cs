@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections;// condiciciones de preprocesador 
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,19 +7,17 @@ public class PlayerMovement : MonoBehaviour
     public int jumpForce;
     public AudioClip jumpClip;
 
-    private Camera _cam;
     private Rigidbody _rb;
     // Start is called before the first frame update
     void Start()
     {
-        _cam = Camera.main;
         _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR || UNITY_STANDALONE
+#if UNITY_EDITOR || UNITY_STANDALONE  // intrucciones condicionales 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Movementjump();
@@ -35,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
 #endif
         void Movementjump()
         {
