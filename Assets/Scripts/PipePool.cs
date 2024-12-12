@@ -35,8 +35,8 @@ public class PipePool : MonoBehaviour
         {
             obj.SetActive(true);
             obj.transform.position = transform.position;
+            obj.transform.position = new Vector3(transform.position.x, Random.Range(minHeight, maxHeight), transform.position.z);
             obj.GetComponent<Pipe>().SetDirection(Vector3.left);
-            obj.transform.position = new Vector3(0, Random.Range(minHeight, maxHeight), 0);
         }
 
     }

@@ -51,10 +51,10 @@ public class GameManager : MonoBehaviour
             AudioManager.instance.ClearAudios();
         }
 
-        if(Input.GetKeyDown(KeyCode.Space)) 
-        {
-            score++;
-        }
+        //if(Input.GetKeyDown(KeyCode.Space)) 
+        //{
+        //    score++;
+        //}
     }
     // Getter = para obtener el valor de una variable 
     public float GetTime() // obtiene el tiempo
@@ -91,5 +91,4 @@ public class GameManager : MonoBehaviour
         //AudioManager.instance.PlayAudio(exitClip, "exitClip");
         Application.Quit();
     }
-
 }

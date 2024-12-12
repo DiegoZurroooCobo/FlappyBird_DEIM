@@ -1,6 +1,7 @@
 using System.Collections;// condiciciones de preprocesador 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip jumpClip;
 
     private Rigidbody _rb;
+    private int hits;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,20 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.AddForce(Vector3.up * jumpForce);
             AudioManager.instance.PlayAudio(jumpClip, "JumpClip");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.GetComponent<Pipe>()) 
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            hits++;
+
+            if(hits == Random.Range(3, 5)) 
+            {
+                AdDisplayManager.instance.ShowAd();
+            }
         }
     }
 }
