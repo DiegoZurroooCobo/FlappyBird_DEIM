@@ -13,7 +13,7 @@ public class GameObjectPool : MonoBehaviour
     
     private List<GameObject> _pool;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _pool = new List<GameObject>();
         for(int i = 0; i < sizePool; i++) 

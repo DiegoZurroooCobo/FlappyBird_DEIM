@@ -8,7 +8,7 @@ public class Pipe : MonoBehaviour
 
     private float currentTime;
     private Rigidbody rb;
-    private Vector3 dir;
+    private Vector3 dir = Vector3.left;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class Pipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime = Time.deltaTime;
+        currentTime += Time.deltaTime;
         if(currentTime >= maxTime) 
         { 
             currentTime = 0;
