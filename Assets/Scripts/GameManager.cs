@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public AudioClip enterClip, exitClip, jumpClip;
     // enum = para facilitar la lectura del codigo 
     private float time;
-    private int score;
+    private int score, hits;
     private Vector3 pos;
     private void Awake() // primer metodo que se ejecuta en Unity 
     {
@@ -75,6 +75,10 @@ public class GameManager : MonoBehaviour
     {
         score = value;
     }
+
+    public int GetHits() { return hits; }
+
+    public void SetHits(int value) { hits = value; }
     // callback == funcion que se va a llamar en el on click de los botones 
     public void LoadScene(string SceneName) // Te lleva a la escena que te selecciones como la primera
     {

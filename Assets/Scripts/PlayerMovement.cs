@@ -47,13 +47,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<Pipe>()) 
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            hits++;
-
-            if(hits == Random.Range(3, 5)) 
+            GameManager.instance.SetHits(GameManager.instance.GetHits() + 1);
+            if(GameManager.instance.GetHits() >= Random.Range(3, 5)) 
             {
                 AdDisplayManager.instance.ShowAd();
+                GameManager.instance.SetHits(0);
             }
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
