@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
+public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener, IUnityAdsInitializationListener
 {
     public static AdDisplayManager instance;
     public string unityAdsID;
@@ -13,17 +13,17 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
-        throw new System.NotImplementedException();
+        Advertisement.Show(adType, this);
     }
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
     {
-        throw new System.NotImplementedException();
+        Debug.Log(message);
     }
 
     public void OnUnityAdsShowClick(string placementId)
     {
-        throw new System.NotImplementedException();
+
     }
 
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
@@ -33,12 +33,22 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
-        throw new System.NotImplementedException();
+
     }
 
     public void OnUnityAdsShowStart(string placementId)
     {
-        throw new System.NotImplementedException();
+
+    }
+
+    public void OnInitializationComplete()
+    {
+
+    }
+
+    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+    {
+
     }
 
     private void Awake()
@@ -59,9 +69,9 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
         if(!Advertisement.isInitialized) 
         {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR || UNITY_ANDROID
-            Advertisement.Initialize(androidID.ToString(), testmode);
+            Advertisement.Initialize(androidID.ToString(), testmode, this);
 #elif UNITY_IOS
-            Advertisement.Initialize(appleID);
+            Advertisement.Initialize(appleID.ToString(), testMode, this);
 #endif
         }
     }
@@ -70,8 +80,7 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
     { 
         if(Advertisement.isInitialized) 
         {
-            Advertisement.Load(adType);
-            Advertisement.Show(adType);
+            Advertisement.Load(adType, this);
         }
     }
 
@@ -80,4 +89,5 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
     {
         
     }
+
 }

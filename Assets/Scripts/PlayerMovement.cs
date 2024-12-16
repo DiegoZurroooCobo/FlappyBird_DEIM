@@ -45,16 +45,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.GetComponent<Pipe>()) 
+        if (collision.gameObject.GetComponent<Pipe>())
         {
             GameManager.instance.SetHits(GameManager.instance.GetHits() + 1);
-            if(GameManager.instance.GetHits() >= Random.Range(3, 5)) 
-            {
-                AdDisplayManager.instance.ShowAd();
-                GameManager.instance.SetHits(0);
-            }
-
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (GameManager.instance.GetHits() >= Random.Range(3, 6))
+        {
+            AdDisplayManager.instance.ShowAd();
+            GameManager.instance.SetHits(0);
         }
     }
 }

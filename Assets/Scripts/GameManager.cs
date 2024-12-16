@@ -50,11 +50,6 @@ public class GameManager : MonoBehaviour
             transform.position = pos;
             AudioManager.instance.ClearAudios();
         }
-
-        //if(Input.GetKeyDown(KeyCode.Space)) 
-        //{
-        //    score++;
-        //}
     }
     // Getter = para obtener el valor de una variable 
     public float GetTime() // obtiene el tiempo
@@ -76,9 +71,15 @@ public class GameManager : MonoBehaviour
         score = value;
     }
 
-    public int GetHits() { return hits; }
+    public int GetHits() 
+    { 
+        return hits; 
+    }
 
-    public void SetHits(int value) { hits = value; }
+    public void SetHits(int value) 
+    { 
+        hits = value; 
+    }
     // callback == funcion que se va a llamar en el on click de los botones 
     public void LoadScene(string SceneName) // Te lleva a la escena que te selecciones como la primera
     {
