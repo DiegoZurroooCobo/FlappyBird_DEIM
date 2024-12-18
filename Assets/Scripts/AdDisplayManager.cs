@@ -9,7 +9,7 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
     public string unityAdsID;
     public int androidID, appleID;
     public bool testmode = false;
-    public string adType = "Banner_Android";
+    public string adType = "Interstitial_Android";
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
@@ -18,7 +18,7 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
     {
-        Debug.Log(message);
+        Debug.Log("holaaaaaaaaaaaaaaa" + message);
     }
 
     public void OnUnityAdsShowClick(string placementId)

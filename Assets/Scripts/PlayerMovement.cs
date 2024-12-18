@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-#elif UNITY_EDITOR
+#elif UNITY_ANDROID
         foreach (Touch touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began)
@@ -34,13 +34,12 @@ public class PlayerMovement : MonoBehaviour
                 Movementjump();
             }
         }
-    }
 #endif
-        void Movementjump()
-        {
-            _rb.AddForce(Vector3.up * jumpForce);
-            AudioManager.instance.PlayAudio(jumpClip, "JumpClip");
-        }
+    }
+    void Movementjump()
+    {
+        _rb.AddForce(Vector3.up * jumpForce);
+        AudioManager.instance.PlayAudio(jumpClip, "JumpClip");
     }
 
     private void OnCollisionEnter(Collision collision)
