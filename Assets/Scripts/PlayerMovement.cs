@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private int hits;
+    private Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void Movementjump()
     {
         _rb.AddForce(Vector3.up * jumpForce);
-        AudioManager.instance.PlayAudio(jumpClip, "JumpClip");
+        _animator.Play("Flying");
     }
 
     private void OnCollisionEnter(Collision collision)

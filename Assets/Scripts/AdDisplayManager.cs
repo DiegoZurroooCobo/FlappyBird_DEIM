@@ -70,8 +70,10 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
         {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR || UNITY_ANDROID
             Advertisement.Initialize(androidID.ToString(), testmode, this);
+
 #elif UNITY_IOS
             Advertisement.Initialize(appleID.ToString(), testMode, this);
+
 #endif
         }
     }

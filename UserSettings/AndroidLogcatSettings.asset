@@ -3,17 +3,11 @@
     "m_SelectedProcess": {
         "deviceId": "a1d8d7fe",
         "name": "com.DefaultCompany.Flappy_Dva",
-        "processId": 29100,
+        "processId": 31946,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownProcessesForSerialization": [
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 17860,
-            "exited": true
-        },
         {
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
@@ -36,6 +30,30 @@
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 29100,
+            "exited": true
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.android.launcher",
+            "processId": 4501,
+            "exited": false
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 24238,
+            "exited": false
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 31946,
+            "exited": false
+        },
+        {
+            "deviceId": "f79deef90d4f",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 2845,
             "exited": false
         }
     ],
