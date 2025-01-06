@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Movementjump();
+            //_animator.SetBool("Flying", true);
+        }
+        else 
+        {
+            //_animator.SetBool("Flying", false);
         }
 
 
@@ -40,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     void Movementjump()
     {
         _rb.AddForce(Vector3.up * jumpForce);
-        _animator.Play("Flying");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -49,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             GameManager.instance.SetHits(GameManager.instance.GetHits() + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.instance.SetScore(0);
         }
 
         if (GameManager.instance.GetHits() >= Random.Range(3, 6))

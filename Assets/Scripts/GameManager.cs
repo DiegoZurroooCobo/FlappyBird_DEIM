@@ -8,11 +8,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance; // La instancia de la clase
     public KeyCode Escape;
     public enum GameManagerVariables { TIME, SCORE, LIFES };
-    public AudioClip enterClip, exitClip, jumpClip;
+    public AudioClip startClip, first10Clip;
     // enum = para facilitar la lectura del codigo 
     private float time;
     private int score, hits;
-    private Vector3 pos;
     private void Awake() // primer metodo que se ejecuta en Unity 
     {
         // Singleton dos caracteristicas: - Solo existe una instancia de esa clase
@@ -30,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pos = transform.position;
+        AudioManager.instance.PlayAudio(startClip, "startClip", false);
     }
 
     // Update is called once per frame
@@ -47,7 +46,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             time = 0;
-            transform.position = pos;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SetScore(0);
+            AudioManager.instance.PlayAudio(startClip, "startClip", false);
             AudioManager.instance.ClearAudios();
         }
     }
@@ -71,14 +72,14 @@ public class GameManager : MonoBehaviour
         score = value;
     }
 
-    public int GetHits() 
-    { 
-        return hits; 
+    public int GetHits()
+    {
+        return hits;
     }
 
-    public void SetHits(int value) 
-    { 
-        hits = value; 
+    public void SetHits(int value)
+    {
+        hits = value;
     }
     // callback == funcion que se va a llamar en el on click de los botones 
     public void LoadScene(string SceneName) // Te lleva a la escena que te selecciones como la primera
