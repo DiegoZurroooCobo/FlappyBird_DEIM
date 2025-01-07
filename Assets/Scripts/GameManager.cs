@@ -51,11 +51,6 @@ public class GameManager : MonoBehaviour
             AudioManager.instance.PlayAudio(startClip, "startClip", false);
             AudioManager.instance.ClearAudios();
         }
-
-        if(GetScore() == Random.Range(10, 15)) 
-        {
-            AudioManager.instance.PlayAudio(first10Clip, "first10Clip");
-        }
     }
     // Getter = para obtener el valor de una variable 
     public float GetTime() // obtiene el tiempo
