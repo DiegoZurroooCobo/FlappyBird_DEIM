@@ -149,7 +149,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cube.001|Cube.001Action.001
+      name: Flying movement
       takeName: Cube.001|Cube.001Action.001
       internalID: -4064532029014869935
       firstFrame: 0

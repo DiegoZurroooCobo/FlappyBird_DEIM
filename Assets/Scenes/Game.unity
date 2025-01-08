@@ -893,6 +893,55 @@ CapsuleCollider:
   m_Height: 0.05078715
   m_Direction: 2
   m_Center: {x: -0.000000001828083, y: 0.0006255152, z: -0.0016680252}
+--- !u!1 &1566158761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566158763}
+  - component: {fileID: 1566158762}
+  m_Layer: 0
+  m_Name: BGMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1566158762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566158761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc27f1c4c67dd64795b9e9e3625d9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: fb734fc7540cb904bb32087352bd6661, type: 3}
+  isLoop: 1
+  playOnGameStart: 1
+  volume: 1
+  gameObjectName: Background menu GAME
+--- !u!4 &1566158763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566158761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 437.73483, y: 234.93172, z: 145.24164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1715927632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Escape: 27
-  startClip: {fileID: 0}
+  startClip: {fileID: 8300000, guid: 616b267de468d6f4f8cea41725315e9a, type: 3}
   first10Clip: {fileID: 0}
 --- !u!4 &1898305344
 Transform:
@@ -1608,3 +1657,4 @@ SceneRoots:
   - {fileID: 2139872422}
   - {fileID: 940125151}
   - {fileID: 1209748837}
+  - {fileID: 1566158763}

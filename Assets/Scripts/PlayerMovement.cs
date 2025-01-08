@@ -22,14 +22,8 @@ public class PlayerMovement : MonoBehaviour
 #if UNITY_EDITOR || UNITY_STANDALONE  // intrucciones condicionales 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Movementjump();
-            _animator.SetBool("Flying", true);
+            Movementjump();         
         }
-        else 
-        {
-            _animator.SetBool("Flying", false);
-        }
-
 
 #elif UNITY_ANDROID
         foreach (Touch touch in Input.touches)
@@ -44,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     void Movementjump()
     {
         _rb.AddForce(Vector3.up * jumpForce);
+        _animator.SetBool("Flying", true);
     }
 
     private void OnCollisionEnter(Collision collision)
