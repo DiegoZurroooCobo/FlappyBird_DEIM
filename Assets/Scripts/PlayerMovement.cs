@@ -23,11 +23,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Movementjump();
-            //_animator.SetBool("Flying", true);
+            _animator.SetBool("Flying", true);
         }
         else 
         {
-            //_animator.SetBool("Flying", false);
+            _animator.SetBool("Flying", false);
         }
 
 

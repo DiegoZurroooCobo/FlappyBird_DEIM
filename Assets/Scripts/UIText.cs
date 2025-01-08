@@ -16,9 +16,6 @@ public class UIText : MonoBehaviour
     {
         switch (variable)
         {
-            case GameManager.GameManagerVariables.TIME:
-                text.text = "Time: " + GameManager.instance.GetTime().ToString("#.##");
-                break;
             case GameManager.GameManagerVariables.SCORE:
                 text.text = "Points: " + GameManager.instance.GetScore();
                 break;

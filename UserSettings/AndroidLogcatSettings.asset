@@ -1,31 +1,13 @@
 {
     "m_SelectedDeviceId": "a1d8d7fe",
     "m_SelectedProcess": {
-        "deviceId": "a1d8d7fe",
-        "name": "com.DefaultCompany.Flappy_Dva",
-        "processId": 24274,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownProcessesForSerialization": [
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 20559,
-            "exited": true
-        },
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 22958,
-            "exited": true
-        },
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 26944,
-            "exited": true
-        },
         {
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
@@ -42,18 +24,24 @@
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 24238,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 31946,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 24274,
+            "exited": true
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 13844,
             "exited": false
         },
         {
