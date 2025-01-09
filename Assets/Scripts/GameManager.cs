@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         {
             time = 0;
             SceneManager.LoadScene("Menu");
-            AudioManager.instance.ClearAudio();
+            AudioManager.instance.ClearAudios();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -49,8 +49,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             SetScore(0);
             AudioManager.instance.PlayAudio(startClip, "startClip", false);
-            AudioManager.instance.ClearAudio();
+            AudioManager.instance.ClearAudios();
         }
+
+        //if (GetScore() == 5)
+        //{
+        //    AudioManager.instance.PlayAudio(first10Clip, "first10Clip");
+        //}
     }
     // Getter = para obtener el valor de una variable 
     public float GetTime() // obtiene el tiempo
@@ -88,7 +93,7 @@ public class GameManager : MonoBehaviour
         //AudioManager.instance.PlayAudio(enterClip, "enterClip");
         SceneManager.LoadScene(SceneName);
         // Limpia todos los sonidos que estan sonando 
-        AudioManager.instance.ClearAudio();
+        AudioManager.instance.ClearAudios();
     }
 
     public void ExitGame() // Te permite salir del menu del juego 

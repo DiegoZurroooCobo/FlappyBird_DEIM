@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public int jumpForce;
+    public Material mat;
 
     private Rigidbody _rb;
     private int hits;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 #if UNITY_EDITOR || UNITY_STANDALONE  // intrucciones condicionales 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Movementjump();         
+            Movementjump();
         }
 
 #elif UNITY_ANDROID
@@ -38,16 +39,13 @@ public class PlayerMovement : MonoBehaviour
     void Movementjump()
     {
         _rb.AddForce(Vector3.up * jumpForce);
-        _animator.SetBool("Flying", true);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<Pipe>())
         {
-            GameManager.instance.SetHits(GameManager.instance.GetHits() + 1);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            GameManager.instance.SetScore(0);
+            StartCoroutine(WaitDeath());
         }
 
         if (GameManager.instance.GetHits() >= Random.Range(3, 6))
@@ -55,5 +53,16 @@ public class PlayerMovement : MonoBehaviour
             AdDisplayManager.instance.ShowAd();
             GameManager.instance.SetHits(0);
         }
+    }
+
+    IEnumerator WaitDeath()
+    {
+        GetComponent<PlayerMovement>().enabled = false;
+        GameManager.instance.SetHits(GameManager.instance.GetHits() + 1);
+        GameManager.instance.SetScore(0);
+        AudioManager.instance.ClearAudios();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        yield return new WaitForSeconds(1f);
     }
 }

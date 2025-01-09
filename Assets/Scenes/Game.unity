@@ -317,8 +317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pipePool: {fileID: 2139872421}
   maxTime: 1.25
-  minHeight: -3
-  maxHeight: -6.5
+  minHeight: -1
+  maxHeight: -6
 --- !u!23 &940125149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -843,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 400
+  mat: {fileID: 0}
 --- !u!54 &1499804710
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -922,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc27f1c4c67dd64795b9e9e3625d9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: fb734fc7540cb904bb32087352bd6661, type: 3}
+  audioClip: {fileID: 8300000, guid: e5897fcfaa9831f45ac858c71026a293, type: 3}
   isLoop: 1
   playOnGameStart: 1
   volume: 1
@@ -1504,7 +1505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Escape: 27
   startClip: {fileID: 8300000, guid: 616b267de468d6f4f8cea41725315e9a, type: 3}
-  first10Clip: {fileID: 0}
+  first10Clip: {fileID: 8300000, guid: 4d270b1a0c025b74ea8f39494808e54d, type: 3}
 --- !u!4 &1898305344
 Transform:
   m_ObjectHideFlags: 0

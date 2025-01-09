@@ -830,7 +830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 241}
+  m_AnchoredPosition: {x: 0, y: 203}
   m_SizeDelta: {x: 274.418, y: 40.811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627029605
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Creditos: yo'
+  m_text: "Creditos: \nDiego Zurro \n:p"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee190b5f41348d847b1cdf097d23c3dd, type: 2}
   m_sharedMaterial: {fileID: 3761653119444385792, guid: ee190b5f41348d847b1cdf097d23c3dd, type: 2}
