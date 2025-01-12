@@ -15,16 +15,16 @@ public class GameObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        _pool = new List<GameObject>();
-        for(int i = 0; i < sizePool; i++) 
+        _pool = new List<GameObject>(); // se crea un lista 
+        for(int i = 0; i < sizePool; i++) // se recorre la lista 
         {
-            AddGameObject();
+            AddGameObject(); // se añaden 
         }
     }
 
     public GameObject GimmeInactiveGameObject() 
     { 
-        foreach(GameObject obj in _pool) 
+        foreach(GameObject obj in _pool) // por cada objeto en la lista de la pool 
         {
             if (!obj.activeSelf) // si el objeto no esta activo 
             { 
@@ -32,24 +32,18 @@ public class GameObjectPool : MonoBehaviour
             }
         }
 
-        if(shouldExpand) 
+        if(shouldExpand) // si se tiene que exapndir la lista 
         { 
-            return AddGameObject();
+            return AddGameObject(); // se devuelve el metodo de añadir mas obejtos 
         }
         return null;
     }
 
-    GameObject AddGameObject() 
+    GameObject AddGameObject() // metodo de añadir los objetos 
     { 
-        GameObject clone = Instantiate(objectToPool);
+        GameObject clone = Instantiate(objectToPool); // se crea un gameObject y se instancia el objeto que va a salir 
         clone.SetActive(false); // se desactiva para que no se utiliza de primeras
-        _pool.Add(clone);
-        return clone;
-    }
-         
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _pool.Add(clone); // se añade el clon del gameObject a la pool
+        return clone; // se devuelve el clon
     }
 }

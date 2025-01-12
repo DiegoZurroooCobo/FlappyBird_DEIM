@@ -11,7 +11,7 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
     public bool testmode = false;
     public string adType = "Interstitial_Android";
 
-    public void OnUnityAdsAdLoaded(string placementId)
+    public void OnUnityAdsAdLoaded(string placementId) // cuando se carga el anuncio 
     {
         Advertisement.Show(adType, this);
     }
@@ -50,7 +50,6 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
     {
 
     }
-
     private void Awake()
     {
         if(!instance) 
@@ -66,10 +65,10 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
     // Start is called before the first frame update
     void Start()
     {
-        if(!Advertisement.isInitialized) 
+        if(!Advertisement.isInitialized)  // si los anuncios no se han iniciado 
         {
-#if UNITY_STANDALONE_WIN || UNITY_EDITOR || UNITY_ANDROID
-            Advertisement.Initialize(androidID.ToString(), testmode, this);
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR || UNITY_ANDROID 
+            Advertisement.Initialize(androidID.ToString(), testmode, this); // se inician en 
 
 #elif UNITY_IOS
             Advertisement.Initialize(appleID.ToString(), testMode, this);
@@ -78,7 +77,7 @@ public class AdDisplayManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
         }
     }
 
-    public void ShowAd() 
+    public void ShowAd() // metodo para mostrar los anuncios 
     { 
         if(Advertisement.isInitialized) 
         {

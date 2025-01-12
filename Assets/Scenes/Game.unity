@@ -317,8 +317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pipePool: {fileID: 2139872421}
   maxTime: 1.25
-  minHeight: -1
-  maxHeight: -6
+  minHeight: -3
+  maxHeight: -7
 --- !u!23 &940125149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 400
-  mat: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: ca18c3746b13bdb429b5b4becac563ab, type: 3}
 --- !u!54 &1499804710
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: e5897fcfaa9831f45ac858c71026a293, type: 3}
   isLoop: 1
   playOnGameStart: 1
-  volume: 1
+  volume: 0.8
   gameObjectName: Background menu GAME
 --- !u!4 &1566158763
 Transform:
@@ -1504,6 +1504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Escape: 27
+  hits: 0
   startClip: {fileID: 8300000, guid: 616b267de468d6f4f8cea41725315e9a, type: 3}
   first10Clip: {fileID: 8300000, guid: 4d270b1a0c025b74ea8f39494808e54d, type: 3}
 --- !u!4 &1898305344

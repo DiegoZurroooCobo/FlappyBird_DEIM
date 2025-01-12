@@ -7,11 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // La instancia de la clase
     public KeyCode Escape;
+    public int hits;
     public enum GameManagerVariables { TIME, SCORE, LIFES };
     public AudioClip startClip, first10Clip;
     // enum = para facilitar la lectura del codigo 
     private float time;
-    private int score, hits;
+    private int score;
     private void Awake() // primer metodo que se ejecuta en Unity 
     {
         // Singleton dos caracteristicas: - Solo existe una instancia de esa clase

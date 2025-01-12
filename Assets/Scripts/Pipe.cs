@@ -19,10 +19,10 @@ public class Pipe : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        if(currentTime >= maxTime) 
+        if(currentTime >= maxTime) // si el tiempo actual supera el tiempo maximo 
         { 
-            currentTime = 0;
-            gameObject.SetActive(false);
+            currentTime = 0; // el tiempo se vuelve 0 
+            gameObject.SetActive(false); // se desactiva el objeto de la pool 
         }
     }
 
@@ -31,7 +31,7 @@ public class Pipe : MonoBehaviour
         rb.velocity = speed * dir;
     }
 
-    public void SetDirection(Vector3 value) 
+    public void SetDirection(Vector3 value) // metodo para darle una direccion a las tuberias 
     { 
         dir = value;
     }
