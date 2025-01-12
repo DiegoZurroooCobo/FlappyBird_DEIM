@@ -965,6 +965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Escape: 0
+  hits: 0
   startClip: {fileID: 0}
   first10Clip: {fileID: 0}
 --- !u!4 &1707165478

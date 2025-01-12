@@ -11,24 +11,6 @@
         {
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 29100,
-            "exited": true
-        },
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.android.launcher",
-            "processId": 4501,
-            "exited": false
-        },
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 24238,
-            "exited": true
-        },
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 31946,
             "exited": true
         },
@@ -42,6 +24,18 @@
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 13844,
+            "exited": true
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 28394,
+            "exited": true
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 3037,
             "exited": false
         },
         {

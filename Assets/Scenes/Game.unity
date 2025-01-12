@@ -926,7 +926,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: e5897fcfaa9831f45ac858c71026a293, type: 3}
   isLoop: 1
   playOnGameStart: 1
-  volume: 0.8
+  volume: 0.65
   gameObjectName: Background menu GAME
 --- !u!4 &1566158763
 Transform:
