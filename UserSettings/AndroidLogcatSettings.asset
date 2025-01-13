@@ -11,12 +11,6 @@
         {
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
-            "processId": 31946,
-            "exited": true
-        },
-        {
-            "deviceId": "a1d8d7fe",
-            "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 24274,
             "exited": true
         },
@@ -36,6 +30,12 @@
             "deviceId": "a1d8d7fe",
             "name": "com.DefaultCompany.Flappy_Dva",
             "processId": 3037,
+            "exited": true
+        },
+        {
+            "deviceId": "a1d8d7fe",
+            "name": "com.DefaultCompany.Flappy_Dva",
+            "processId": 24378,
             "exited": false
         },
         {
